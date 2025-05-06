@@ -5,6 +5,8 @@ import org.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -17,5 +19,10 @@ public class UserService {
     public User createUser(User user){
         userRepository.save(user);
         return user;
+    }
+
+    public List<User> getAllUsers(){
+        List<User> allUsers = userRepository.findAll();
+        return allUsers;
     }
 }

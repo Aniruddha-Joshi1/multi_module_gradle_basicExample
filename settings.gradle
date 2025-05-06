@@ -1,4 +1,5 @@
 rootProject.name = 'UserManagement'
 include 'common'
 include 'userApp'
+include 'userAppNew'
 
